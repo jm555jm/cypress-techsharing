@@ -9,4 +9,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          install-command: cd ./app && npm i
           start: npm run test:ci
