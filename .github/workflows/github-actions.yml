@@ -15,5 +15,5 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           working-directory: ./app
-          install-command: rm -f ./package-lock.json && rm -rf node_modules && npm i
+          install-command: rm -f ./package-lock.json && npm i
           start: npm run test:ci
