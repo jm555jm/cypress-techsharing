@@ -2,7 +2,11 @@
   "name": "~TODO~",
   "version": "0.0.1",
   "scripts": {
-    "cypress:open": "cypress open",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser firefox:dev",
+    "start:backend": "cd .. && ./gradlew bootRun",
+    "test:dev": "run-p -clnr start:backend dev cy:open",
+    "test:ci": "run-p -clnr start:backend dev cy:run",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
